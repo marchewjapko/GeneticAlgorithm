@@ -45,6 +45,7 @@ namespace GeneticAlgorithm
             this.bestIndividualValueTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.plotView2 = new OxyPlot.WindowsForms.PlotView();
             this.SuspendLayout();
             // 
             // iterationsTextBox
@@ -114,7 +115,7 @@ namespace GeneticAlgorithm
             this.plotView1.Location = new System.Drawing.Point(12, 12);
             this.plotView1.Name = "plotView1";
             this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView1.Size = new System.Drawing.Size(646, 382);
+            this.plotView1.Size = new System.Drawing.Size(530, 358);
             this.plotView1.TabIndex = 7;
             this.plotView1.Text = "plotView1";
             this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
@@ -123,18 +124,18 @@ namespace GeneticAlgorithm
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(664, 12);
+            this.label4.Location = new System.Drawing.Point(462, 373);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 21);
+            this.label4.Size = new System.Drawing.Size(205, 21);
             this.label4.TabIndex = 8;
             this.label4.Text = "Best individual";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(678, 40);
+            this.label6.Location = new System.Drawing.Point(568, 396);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 15);
             this.label6.TabIndex = 10;
@@ -142,14 +143,14 @@ namespace GeneticAlgorithm
             // 
             // bestIndividualFitnessTextBox
             // 
-            this.bestIndividualFitnessTextBox.Location = new System.Drawing.Point(677, 58);
+            this.bestIndividualFitnessTextBox.Location = new System.Drawing.Point(567, 414);
             this.bestIndividualFitnessTextBox.Name = "bestIndividualFitnessTextBox";
             this.bestIndividualFitnessTextBox.Size = new System.Drawing.Size(100, 23);
             this.bestIndividualFitnessTextBox.TabIndex = 11;
             // 
             // bestIndividualValueTextBox
             // 
-            this.bestIndividualValueTextBox.Location = new System.Drawing.Point(678, 110);
+            this.bestIndividualValueTextBox.Location = new System.Drawing.Point(461, 414);
             this.bestIndividualValueTextBox.Name = "bestIndividualValueTextBox";
             this.bestIndividualValueTextBox.Size = new System.Drawing.Size(100, 23);
             this.bestIndividualValueTextBox.TabIndex = 14;
@@ -157,7 +158,7 @@ namespace GeneticAlgorithm
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(679, 92);
+            this.label7.Location = new System.Drawing.Point(462, 396);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 15);
             this.label7.TabIndex = 13;
@@ -167,16 +168,30 @@ namespace GeneticAlgorithm
             // 
             this.label8.Location = new System.Drawing.Point(406, 415);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 23);
+            this.label8.Size = new System.Drawing.Size(19, 23);
             this.label8.TabIndex = 15;
             this.label8.Text = "%";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // plotView2
+            // 
+            this.plotView2.BackColor = System.Drawing.SystemColors.Control;
+            this.plotView2.Location = new System.Drawing.Point(548, 12);
+            this.plotView2.Name = "plotView2";
+            this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView2.Size = new System.Drawing.Size(240, 358);
+            this.plotView2.TabIndex = 16;
+            this.plotView2.Text = "plotView2";
+            this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView2.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.plotView2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bestIndividualValueTextBox);
             this.Controls.Add(this.label7);
@@ -214,5 +229,6 @@ namespace GeneticAlgorithm
         private TextBox bestIndividualValueTextBox;
         private Label label7;
         private Label label8;
+        private OxyPlot.WindowsForms.PlotView plotView2;
     }
 }

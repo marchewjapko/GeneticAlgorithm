@@ -16,7 +16,6 @@
             {
                 var value = random.Next(-1, 23);
                 individuals.Add(new Individual(value));
-                //individuals.Add(new Individual(i));
             }
         }
     }

@@ -31,13 +31,23 @@ namespace GeneticAlgorithm
                 LegendTitle = "Legend",
                 LegendPosition = LegendPosition.RightBottom,
             });
-
             this.plotView1.Model = graphModel;
+
+
+            var graphModelFitness = new PlotModel { Title = "Fitness" };
+            graphModelFitness.Series.Add(GetFunction());
+            graphModelFitness.Series.Add(GetBestIndividual(geneticAlgorithm));
+            graphModelFitness.Legends.Add(new Legend()
+            {
+                LegendTitle = "Legend",
+                LegendPosition = LegendPosition.RightBottom,
+            });
+            this.plotView2.Model = graphModelFitness;
         }
 
         private FunctionSeries GetFunction()
         {
-            FunctionSeries serie = new FunctionSeries();
+            var serie = new FunctionSeries();
             serie.Title = "Fitness function";
             for (int x = -2; x < 25; x++)
             {
@@ -49,9 +59,11 @@ namespace GeneticAlgorithm
 
         private FunctionSeries GetAverageFitness(GeneticAlgorithmSolver geneticAlgorithm)
         {
-            FunctionSeries serie = new FunctionSeries();
-            serie.Title = "Average fitness";
-            for(int i = 0; i < geneticAlgorithm.populations.Count; i++)
+            var serie = new FunctionSeries
+            {
+                Title = "Average fitness"
+            };
+            for (int i = 0; i < geneticAlgorithm.populations.Count; i++)
             {
                 DataPoint data = new DataPoint(i, PopulationOperations.GetAverageFitness(geneticAlgorithm.populations[i]));
                 serie.Points.Add(data);
@@ -61,13 +73,30 @@ namespace GeneticAlgorithm
 
         private FunctionSeries GetMaxFitness(GeneticAlgorithmSolver geneticAlgorithm)
         {
-            FunctionSeries serie = new FunctionSeries();
-            serie.Title = "Max fitness";
+            var serie = new FunctionSeries
+            {
+                Title = "Max fitness"
+            };
             for (int i = 0; i < geneticAlgorithm.populations.Count; i++)
             {
-                DataPoint data = new DataPoint(i, PopulationOperations.GetHighestFitness(geneticAlgorithm.populations[i]));
+                DataPoint data = new DataPoint(i, PopulationOperations.GetMaxFitness(geneticAlgorithm.populations[i]));
                 serie.Points.Add(data);
             }
+            return serie;
+        }
+
+        private FunctionSeries GetBestIndividual(GeneticAlgorithmSolver geneticAlgorithm)
+        {
+            var serie = new FunctionSeries
+            {
+                Title = "Best individual",
+                MarkerType = MarkerType.Circle,
+                StrokeThickness = 0,
+                MarkerSize = 4
+
+            };
+            DataPoint data = new DataPoint(geneticAlgorithm.GetBestIndividual().GetDecimalValue(), Fitness.GetFitness(geneticAlgorithm.GetBestIndividual().GetDecimalValue()));
+            serie.Points.Add(data);
             return serie;
         }
     }

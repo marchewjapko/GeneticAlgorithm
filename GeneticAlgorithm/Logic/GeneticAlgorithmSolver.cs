@@ -43,7 +43,7 @@ namespace GeneticAlgorithm.Logic
             }
             foreach(var population in populations)
             {
-                PopulationOperations.DenormalizeFitness(population);
+                PopulationOperations.GetFitness(population);
             }
         }
 

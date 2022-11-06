@@ -28,7 +28,7 @@ namespace GeneticAlgorithm.Logic.Operations
             }
         }
 
-        public static void DenormalizeFitness(Population population)
+        public static void GetFitness(Population population)
         {
             foreach (var individual in population.individuals)
             {
@@ -36,12 +36,14 @@ namespace GeneticAlgorithm.Logic.Operations
             }
         }
 
-        public static void GetFitness(Population population)
+        public static double GetAverageFitness(Population population)
         {
-            foreach (var individual in population.individuals)
-            {
-                individual.FitnessValue = Fitness.GetFitness(individual.GetDecimalValue());
-            }
+            return population.individuals.Average(x => x.FitnessValue);
+        }
+
+        public static double GetMaxFitness(Population population)
+        {
+            return population.individuals.Max(x => x.FitnessValue);
         }
 
         public static List<(Individual, Individual)> RouletteSelection(Population population)
@@ -84,16 +86,6 @@ namespace GeneticAlgorithm.Logic.Operations
                 selectedIndividuals.Add((population.individuals.First(x => x.Id == chosenParent1), population.individuals.First(x => x.Id == chosenParent2)));
             }
             return selectedIndividuals;
-        }
-
-        public static double GetAverageFitness(Population population)
-        {
-            return population.individuals.Average(x => x.FitnessValue);
-        }
-
-        public static double GetHighestFitness(Population population)
-        {
-            return population.individuals.Max(x => x.FitnessValue);
         }
     }
 }
