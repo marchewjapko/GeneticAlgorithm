@@ -226,7 +226,7 @@ namespace GeneticAlgorithm
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iterationsTextBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Genetic algorithm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
