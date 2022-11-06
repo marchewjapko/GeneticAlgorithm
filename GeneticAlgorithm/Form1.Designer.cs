@@ -145,6 +145,7 @@ namespace GeneticAlgorithm
             // 
             this.bestIndividualFitnessTextBox.Location = new System.Drawing.Point(567, 414);
             this.bestIndividualFitnessTextBox.Name = "bestIndividualFitnessTextBox";
+            this.bestIndividualFitnessTextBox.ReadOnly = true;
             this.bestIndividualFitnessTextBox.Size = new System.Drawing.Size(100, 23);
             this.bestIndividualFitnessTextBox.TabIndex = 11;
             // 
@@ -152,6 +153,7 @@ namespace GeneticAlgorithm
             // 
             this.bestIndividualValueTextBox.Location = new System.Drawing.Point(461, 414);
             this.bestIndividualValueTextBox.Name = "bestIndividualValueTextBox";
+            this.bestIndividualValueTextBox.ReadOnly = true;
             this.bestIndividualValueTextBox.Size = new System.Drawing.Size(100, 23);
             this.bestIndividualValueTextBox.TabIndex = 14;
             // 
