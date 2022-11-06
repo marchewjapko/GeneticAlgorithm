@@ -50,6 +50,7 @@ namespace GeneticAlgorithm
             // 
             // iterationsTextBox
             // 
+            this.iterationsTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.iterationsTextBox.Location = new System.Drawing.Point(11, 415);
             this.iterationsTextBox.Name = "iterationsTextBox";
             this.iterationsTextBox.Size = new System.Drawing.Size(117, 23);
@@ -58,6 +59,7 @@ namespace GeneticAlgorithm
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 397);
             this.label1.Name = "label1";
@@ -67,6 +69,7 @@ namespace GeneticAlgorithm
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(149, 397);
             this.label2.Name = "label2";
@@ -76,6 +79,7 @@ namespace GeneticAlgorithm
             // 
             // populationSizeTextBox
             // 
+            this.populationSizeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.populationSizeTextBox.Location = new System.Drawing.Point(149, 415);
             this.populationSizeTextBox.Name = "populationSizeTextBox";
             this.populationSizeTextBox.Size = new System.Drawing.Size(117, 23);
@@ -84,6 +88,7 @@ namespace GeneticAlgorithm
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(289, 397);
             this.label3.Name = "label3";
@@ -93,6 +98,7 @@ namespace GeneticAlgorithm
             // 
             // mutationChanceTextBox
             // 
+            this.mutationChanceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.mutationChanceTextBox.Location = new System.Drawing.Point(289, 415);
             this.mutationChanceTextBox.Name = "mutationChanceTextBox";
             this.mutationChanceTextBox.Size = new System.Drawing.Size(117, 23);
@@ -101,9 +107,10 @@ namespace GeneticAlgorithm
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(713, 414);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 6;
             this.button1.Text = "Solve";
             this.button1.UseVisualStyleBackColor = true;
@@ -111,19 +118,22 @@ namespace GeneticAlgorithm
             // 
             // plotView1
             // 
+            this.plotView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.plotView1.BackColor = System.Drawing.SystemColors.Control;
             this.plotView1.Location = new System.Drawing.Point(12, 12);
             this.plotView1.Name = "plotView1";
             this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
             this.plotView1.Size = new System.Drawing.Size(530, 358);
             this.plotView1.TabIndex = 7;
-            this.plotView1.Text = "plotView1";
             this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.plotView1.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(462, 373);
             this.label4.Name = "label4";
@@ -134,6 +144,7 @@ namespace GeneticAlgorithm
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(568, 396);
             this.label6.Name = "label6";
@@ -143,6 +154,7 @@ namespace GeneticAlgorithm
             // 
             // bestIndividualFitnessTextBox
             // 
+            this.bestIndividualFitnessTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bestIndividualFitnessTextBox.Location = new System.Drawing.Point(567, 414);
             this.bestIndividualFitnessTextBox.Name = "bestIndividualFitnessTextBox";
             this.bestIndividualFitnessTextBox.ReadOnly = true;
@@ -151,6 +163,7 @@ namespace GeneticAlgorithm
             // 
             // bestIndividualValueTextBox
             // 
+            this.bestIndividualValueTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bestIndividualValueTextBox.Location = new System.Drawing.Point(461, 414);
             this.bestIndividualValueTextBox.Name = "bestIndividualValueTextBox";
             this.bestIndividualValueTextBox.ReadOnly = true;
@@ -159,6 +172,7 @@ namespace GeneticAlgorithm
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(462, 396);
             this.label7.Name = "label7";
@@ -168,6 +182,7 @@ namespace GeneticAlgorithm
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.Location = new System.Drawing.Point(406, 415);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 23);
@@ -177,6 +192,8 @@ namespace GeneticAlgorithm
             // 
             // plotView2
             // 
+            this.plotView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.plotView2.BackColor = System.Drawing.SystemColors.Control;
             this.plotView2.Location = new System.Drawing.Point(548, 12);
             this.plotView2.Name = "plotView2";
